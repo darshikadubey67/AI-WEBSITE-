@@ -123,6 +123,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Contact
 
-Darshika Dubey – \[[@darshikadubey67.com](mailto:your-email@example.com)]
+Darshika Dubey – \[[darshikadubey67@gmail.com](mailto:your-email@example.com)]
 
 Project Link: [https://github.com/darshikadubey67/AI-WEBSITE-](https://github.com/darshikadubey67/AI-WEBSITE-)
