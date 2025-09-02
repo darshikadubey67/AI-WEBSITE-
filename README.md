@@ -10,8 +10,8 @@
 - [Features](#features)  
 - [Technologies Used](#technologies-used)  
 - [Installation](#installation)  
-- [Usage](#usage)  
 - [Environment Variables](#environment-variables)  
+- [Usage](#usage)  
 - [Contributing](#contributing)  
 - [License](#license)  
 - [Contact](#contact)  
@@ -77,46 +77,56 @@ pip install -r requirements.txt
 
 # Start the Flask server
 python app.py
+````
 
+---
 
-Environment Variables
+## Environment Variables
 
-The project requires an API key for Groq AI. Create a .env file in the root folder with the following:
+The project requires an API key for Groq AI. Create a `.env` file in the root folder with the following:
+
+```env
 GROQ_API_KEY=your_groq_api_key_here
+FLASK_ENV=development
+```
 
-Note: .env is ignored by Git for security.
+> **Note:** `.env` is ignored by Git for security.
 
-Usage
+---
 
-1- Open your browser and go to http://127.0.0.1:5000/
+## Usage
 
-2- Type your message in the chat input box
+1. Open your browser and go to `http://127.0.0.1:5000/`
+2. Type your message in the chat input box
+3. Press **Enter** or click **Send**
+4. Chatbot responds in real-time using AI
 
-3- Press Enter or click Send
+---
 
-4- Chatbot responds in real-time using AI
-
-Contributing
+## Contributing
 
 Contributions are welcome! To contribute:
 
-1- Fork the repository
-
-2- Create a feature branch (git checkout -b feature/YourFeature)
-
-3- Make your changes and commit (git commit -m 'Add new feature or fix bug')
-
-4- Push the branch (git push origin feature/YourFeature)
-
-5- Open a Pull Request
-License
-
-This project is licensed under the MIT License — see the LICENSE
- file for details.
-
-Contact
-
-Darshika Dubey
-Project Link
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Make your changes and commit (`git commit -m 'Add new feature or fix bug'`)
+4. Push the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
 ---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+Darshika Dubey – \[[@darshikadubey67.com](mailto:your-email@example.com)]
+Project Link: [https://github.com/darshikadubey67/ai-website](https://github.com/darshikadubey67/ai-website)
+
+```
+
+---
+
