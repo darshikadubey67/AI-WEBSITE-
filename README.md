@@ -1,5 +1,4 @@
-# AI-WEBSITE-
-# AI Chatbot Website
+# AI WEBSITE
 
 > An interactive AI chatbot web application powered by **Python Flask** backend and **Groq AI API**, delivering intelligent responses in real time.
 
@@ -21,7 +20,7 @@
 
 ## About the Project
 
-This AI Chatbot Website allows users to interact with a sophisticated AI through a web interface. It uses a **Flask backend** to handle user requests and integrates with **Groq AI** for generating intelligent responses.  
+**AI WEBSITE** allows users to interact with a sophisticated AI through a web interface. It uses a **Flask backend** to handle user requests and integrates with **Groq AI** for generating intelligent responses.  
 
 Key objectives of the project:  
 
@@ -59,10 +58,10 @@ Follow these steps to run the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/darshikadubey67/ai-chatbot-website.git
+git clone https://github.com/darshikadubey67/ai-website.git
 
 # Navigate into the project directory
-cd ai-chatbot-website
+cd ai-website
 
 # Create a virtual environment
 python -m venv venv
