@@ -125,4 +125,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 Darshika Dubey – \[[@darshikadubey67.com](mailto:your-email@example.com)]
 
-Project Link: [https://github.com/darshikadubey67/ai-website](https://github.com/darshikadubey67/ai-website)
+Project Link: [https://github.com/darshikadubey67/ai-website](https://github.com/darshikadubey67/AI-WESBITE)
