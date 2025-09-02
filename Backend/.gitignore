@@ -1,0 +1,30 @@
+# Ignore environment variables
+.env
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment
+venv/
+env/
+ENV/
+
+# Ignore environment variables
+.env
+
+# Ignore Flask instance folder (if you have one)
+instance/
+
+# Ignore IDE/editor settings
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
