@@ -1,0 +1,332 @@
+/* Layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover, .sidebar li.active {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Chat Section */
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Messages */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.ai-message {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  background-size: 200% 200%;
+  border-radius: 16px;
+  padding: 12px 16px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-position 0.5s;
+  position: relative;
+}
+
+/* Hover effect */
+.ai-message:hover {
+  transform: scale(1.05);
+  background-position: 100% 0;
+}
+
+/* Pulse animation for new messages */
+.ai-message.new {
+  animation: pulseGradient 1s ease-in-out forwards, fadeIn 0.3s ease;
+}
+
+/* Gradient pulse keyframes */
+@keyframes pulseGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional shine effect */
+.ai-message::after {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.ai-message:hover::after {
+  opacity: 1;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input */
+.chat-input {
+  display: flex;
+  padding: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+#user-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+#send-btn {
+  margin-left: 10px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#send-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Favorites Panel */
+.favorites {
+  width: 200px;
+  background: rgba(255,255,255,0.05);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  overflow-y: auto;
+}
+/* Chat container scroll styling */
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 70vh;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Scrollbar for Webkit browsers */
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+#chat-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* User message */
+.user-message, .bot-message {
+    padding: 12px 18px;
+    border-radius: 25px;
+    max-width: 70%;
+    position: relative;
+    animation: slideIn 0.5s ease forwards;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-size: 200% 200%;
+    transition: background-position 0.5s, transform 0.3s;
+}
+
+/* Bot message different gradient */
+.bot-message {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    align-self: flex-start;
+}
+
+/* Animate gradient on hover or new message */
+.user-message:hover, .bot-message:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-position: 100% 0;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional pulse effect when message sent/received */
+.user-message.new, .bot-message.new {
+    animation: pulseGradient 1s ease-in-out forwards;
+}
+
+@keyframes pulseGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Extra shine effect */
+.user-message::after, .bot-message::after {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px; bottom: -2px; right: -2px;
+    border-radius: 25px;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.user-message:hover::after, .bot-message:hover::after {
+    opacity: 1;
+}
+/* Common message styles with animation */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  animation: fadeIn 0.3s ease;
+  background-size: 200% 200%;
+  transition: transform 0.3s, background-position 0.5s;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+/* User message gradient and hover */
+.user-message {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background-size: 200% 200%;
+}
+.user-message:hover {
+  transform: scale(1.05);
+  background-position: 100% 0;
+}
+
+/* AI message gradient and hover */
+.ai-message {
+  align-self: flex-start;
+  
+  background-size: 200% 200%;
+}
+.ai-message:hover {
+  transform: scale(1.05);
+  background-position: 100% 0;
+}
+
+/* Animate gradient pulse for new messages */
+.message.new {
+  animation: pulseGradient 1s ease-in-out forwards, fadeIn 0.3s ease;
+}
+
+@keyframes pulseGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shine effect on hover for both types */
+.message::after {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.message:hover::after {
+  opacity: 1;
+}
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  position: fixed;   /* Sticks at the bottom */
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-family: "Poppins", sans-serif;
+  backdrop-filter: blur(10px);
+}

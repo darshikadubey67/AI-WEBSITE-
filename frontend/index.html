@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>🤖 AI Chat</h2>
+      <ul>
+        <li class="active">Main Chat</li>
+        <li>Favorites ⭐</li>
+        <li>Settings ⚙️</li>
+      </ul>
+    </aside>
+
+    <!-- Chat Section -->
+    <main class="chat-section">
+      <header class="chat-header">
+        <h3>Assistant</h3>
+        <button id="toggle-theme">🌙</button>
+      </header>
+
+      <div id="chat-box" class="chat-box"></div>
+
+      <footer class="chat-input">
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button id="send-btn">Send ➤</button>
+      </footer>
+    </main>
+    
+    <!-- Favorites Panel -->
+    <aside id="favorites-panel" class="favorites">
+      <h3>Pinned Messages ⭐</h3>
+      <ul id="favorites-list"></ul>
+    </aside>
+
+  </div>
+<footer class="footer">
+  &copy; 2025 | Built by Darshika
+</footer>
+
+  <script src="script.js"></script>
+  <script src="features.js"></script>
+
+</body>
+</html>
